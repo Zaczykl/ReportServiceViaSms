@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportServiceViaSms", "Repo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsSendConsoleApp", "SmsSendConsoleApp\SmsSendConsoleApp.csproj", "{8DA0802C-E66C-4F4F-878B-7BC221B5F67F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsSender", "SmsSender\SmsSender.csproj", "{8F5EC453-3CAA-427E-893F-1D9FF7E576B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportServiceCore", "ReportServiceCore\ReportServiceCore.csproj", "{3ED0B057-8916-4CC8-AA22-8595912B2227}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{8DA0802C-E66C-4F4F-878B-7BC221B5F67F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DA0802C-E66C-4F4F-878B-7BC221B5F67F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DA0802C-E66C-4F4F-878B-7BC221B5F67F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F5EC453-3CAA-427E-893F-1D9FF7E576B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5EC453-3CAA-427E-893F-1D9FF7E576B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F5EC453-3CAA-427E-893F-1D9FF7E576B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F5EC453-3CAA-427E-893F-1D9FF7E576B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ED0B057-8916-4CC8-AA22-8595912B2227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED0B057-8916-4CC8-AA22-8595912B2227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED0B057-8916-4CC8-AA22-8595912B2227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED0B057-8916-4CC8-AA22-8595912B2227}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

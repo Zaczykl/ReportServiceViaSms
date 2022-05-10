@@ -1,26 +1,20 @@
 ﻿using SMSApi.Api;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ReportServiceViaSms
+namespace SmsSender
 {
-    public class SmsSender
+    public class Sms
     {       
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private IClient _client;
         private string _authToken;
-        private string _textMessage;
         private string _receiverTelNumber;
         private string _senderName;
-        public SmsSender(SmsParams smsParams)
+        public Sms(SmsParams smsParams)
         {
             try
             {
                 _authToken= smsParams.AuthToken;
-                _textMessage= smsParams.TextMessage;
                 _receiverTelNumber= smsParams.ReceiverTelNumber;
                 _senderName= smsParams.SenderName;
                 _client = new ClientOAuth(_authToken);
@@ -31,7 +25,7 @@ namespace ReportServiceViaSms
             }
         }
 
-        public void Send()
+        public void Send(string textMessage)
         {
             try
             {
@@ -39,7 +33,7 @@ namespace ReportServiceViaSms
 
                 var result =
                     smsApi.ActionSend()
-                        .SetText(_textMessage)
+                        .SetText(textMessage)
                         .SetTo(_receiverTelNumber)
                         .SetSender(_senderName) //Sender name
                         .Execute();
