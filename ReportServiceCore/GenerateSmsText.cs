@@ -14,10 +14,10 @@ namespace ReportServiceCore
             if (!errors.Any())
                 return string.Empty;
 
-            string smsText = "Lista błędów\n";
+            string smsText = $"Lista błędów z ostatnich {intervalInMinutes} minut:";
             foreach (var error in errors)
             {
-                smsText += $"Data: {error.Date.ToString("dd-MM HH:mm")}\n{error.ErrorMessage}\n\n";
+                smsText += $"\nData: {error.Date.ToString("dd-MM HH:mm")}\n{error.ErrorMessage}\n";
             }
 
             return smsText;

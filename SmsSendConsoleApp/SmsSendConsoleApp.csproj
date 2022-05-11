@@ -73,12 +73,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ReportServiceViaSms\ReportServiceViaSms.csproj">
-      <Project>{2a5fc161-41f1-4f6d-8860-a6a92d601d6b}</Project>
-      <Name>ReportServiceViaSms</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
