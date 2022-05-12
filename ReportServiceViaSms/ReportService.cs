@@ -10,19 +10,23 @@ namespace ReportServiceViaSms
 {
     public partial class ReportService : ServiceBase
     {
-        StringCipher _cipher = new StringCipher("8508AD4A - B3CD - 45F4 - 88A8 - B2DB6A180FDC");
+        
         GenerateSmsText _generateSmsText = new GenerateSmsText();
         ErrorRepository _errorRepository=new ErrorRepository();
         Sms _smsSender;
+        StringCipher _cipher;
         private const int MILISECONDS_IN_MINUTE=60000;
         private readonly int _intervalInMinutes;
         private Timer _timer=new Timer(MILISECONDS_IN_MINUTE);
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
-        private string NOT_ENCRYPTED_PASSWORD_PREFIX = "encrypt:";
+        private const string NOT_ENCRYPTED_PASSWORD_PREFIX = "encrypt:";
+        private const string _GUID_KEY = "8508AD4A - B3CD - 45F4 - 88A8 - B2DB6A180FDC";
+        
 
         public ReportService()
         {
             InitializeComponent();
+            _cipher= new StringCipher(_GUID_KEY);
             _intervalInMinutes = 1;
             _timer = new Timer(_intervalInMinutes * MILISECONDS_IN_MINUTE);            
             _smsSender = new Sms(new SmsParams
