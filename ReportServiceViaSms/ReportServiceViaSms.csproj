@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Cipher, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\Programowanie\repos\Kurs Zostań Programistą .net\Projekty\12 ReportServiceViaSms\ReportServiceViaSms\Cipher.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -96,17 +100,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Desktop\Programowanie\repos\Kurs Zostań Programistą .net\Projekty\11 ReportService\Cipher\Cipher.csproj">
-      <Project>{4DB019CF-A715-486C-BC37-5FDAAA411ED5}</Project>
-      <Name>Cipher</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ReportServiceCore\ReportServiceCore.csproj">
       <Project>{3ed0b057-8916-4cc8-aa22-8595912b2227}</Project>
       <Name>ReportServiceCore</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SmsSendConsoleApp\SmsSendConsoleApp.csproj">
-      <Project>{8da0802c-e66c-4f4f-878b-7bc221b5f67f}</Project>
-      <Name>SmsSendConsoleApp</Name>
     </ProjectReference>
     <ProjectReference Include="..\SmsSender\SmsSender.csproj">
       <Project>{8f5ec453-3caa-427e-893f-1d9ff7e576b5}</Project>
